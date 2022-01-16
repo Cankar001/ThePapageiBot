@@ -1,0 +1,16 @@
+{
+  "name": "thepagagei",
+  "version": "1.0.0",
+  "description": "Introduces new users",
+  "main": "app.js",
+  "scripts": {
+    "build": "node app.js"
+  },
+  "author": "Can Karka",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@discordjs/opus": "^0.3.3",
+    "@google-cloud/text-to-speech": "^3.1.3",
+    "discord.js": "^12.5.0"
+  }
+}
