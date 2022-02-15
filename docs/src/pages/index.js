@@ -31,10 +31,7 @@ export default function Home() {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-        <Head>
-          <base href="https://thepapageibot.cankarka.com/" />
-        </Head>
+      description="The PapageiBot is a free open-source discord bot for your server!">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
