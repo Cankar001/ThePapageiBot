@@ -9,9 +9,9 @@ To install and run the bot you have to execute some steps first:
 
 1. install all node modules with:
 ```shell
-npm install
+cd src && npm install
 ```
-
+2. you need to setup a config.json
 2. a google billing capable account is required, create your custom credentials (business account) and download your credentials json file
 3. place your credentials json file anywhere in your file system and put this path into the `start.sh` script.
 4. make the `start.sh` script executable with `sudo chmod +x start.sh`

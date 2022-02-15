@@ -1,0 +1,26 @@
+{
+    "demo_label":
+    {
+        "id": "<USERID>",
+        "serverID": "<SERVERID>",
+        "text": [ "pre-defined sentence 1", "pre-defined sentence 2", "pre-defined sentence 3" ],
+        "lang": "de-DE",
+        "gender": "MALE"
+    },
+    "some_demo_label":
+    {
+        "id": "<USERID>",
+        "serverID": "<SERVERID>",
+        "text": [ "pre-defined sentence 1", "pre-defined sentence 2", "pre-defined sentence 3" ],
+        "lang": "en-EN",
+        "gender": "FEMALE"
+    },
+    "another_demo_label":
+    {
+        "id": "<USERID>",
+        "serverID": "<SERVERID>",
+        "text": [ "pre-defined sentence 1", "pre-defined sentence 2", "pre-defined sentence 3" ],
+        "lang": "en-GB",
+        "gender": "NEUTRAL"
+    }
+}

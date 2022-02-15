@@ -1,0 +1,64 @@
+name: ThePapageiBot Documentation Uploader
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+    
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v2.3.2
+        with:
+            fetch-depth: 2
+
+      - name: Build Frontend files
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - run: npm run build
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          server: ${{ secrets.server }}
+          username: ${{ secrets.username }}
+          password: ${{ secrets.password }}
+          port: ${{ secrets.port }}
+          protocol: ${{ secrets.protocol }}
+          server-dir: ${{ secrets.dir }}
+          local-dir: ./docs/build/
+          exclude: .git*
+            - .git*/**
+            -  **/.git*/**
+            - node_modules
+            - node_modules/**
+            - node_modules/**/
+            - README.md
+            - LICENSE
+            - .docusaurus
+            - .docusaurus/**
+            - .docusaurus/**/
+            - static
+            - static/**
+            - static/**/
+            - babel.config.js
+            - docusaurus.config.js
+            - sidebars.js
+            - src
+            - src/**
+            - src/**/
+            - docs
+            - docs/**
+            - docs/**/
+            - blog
+            - blog/**
+            - blog/**/
+
+            

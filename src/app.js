@@ -1,5 +1,5 @@
-const config = require("./config.json");
-const sentences = require("./sentences.json");
+const config = require("../config.json");
+const sentences = require("../sentences.json");
 
 const fs = require('fs');
 const Discord = require('discord.js');
